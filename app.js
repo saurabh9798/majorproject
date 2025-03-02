@@ -22,7 +22,7 @@ const reviewsRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
 
-//const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
 const dbUrl = process.env.ATLASDB_URL;
 
@@ -90,9 +90,10 @@ app.use((req, res, next) => {
     next();
 });
 
-// app.get("/", (req, res) => {
-//     res.send("Hi, I am root");
-// });
+app.get("/", (req, res) => {
+    res.render("home.ejs");
+});
+
 
 // app.get("/demouser", async (req, res) => {
 //     let fakeuser = new User({
@@ -102,7 +103,7 @@ app.use((req, res, next) => {
 //     let registeredUser = await User.register(fakeuser, "helloworld");
 //     res.send(registeredUser);
 // });
-
+// app.use("/",homedir);
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
@@ -120,6 +121,3 @@ app.use((err, req, res, next) => {
 app.listen(8080, () => {
     console.log("Server is running on port 8080");
 });
-
-
-

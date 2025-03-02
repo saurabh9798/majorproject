@@ -1,4 +1,4 @@
-<footer>
+<!-- <footer>
     <div class="f-info">
         <div class="f-info-socials">
             <i class="fa-brands fa-square-facebook"></i>
@@ -11,4 +11,46 @@
            <a href="/terms">Terms</a>
         </div>
     </div>
+</footer> -->
+
+<footer class="bg-dark text-light py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <!-- Social Icons -->
+        <div class="d-flex gap-3">
+            <a href="https://www.facebook.com" class="text-light fs-4" data-bs-toggle="tooltip" title="Facebook"
+                target="_blank">
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com" class="text-light fs-4" data-bs-toggle="tooltip" title="Instagram"
+                target="_blank">
+                <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" class="text-light fs-4" data-bs-toggle="tooltip" title="LinkedIn"
+                target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+
+
+        <!-- Brand Name -->
+        <div class="text-center mt-3 mt-md-0">
+            &copy; 2025 WanderLust Private Limited
+        </div>
+
+        <!-- Links -->
+        <div class="d-flex gap-3 mt-3 mt-md-0">
+            <a href="/privacy" class="text-light text-decoration-none">Privacy</a>
+            <a href="/terms" class="text-light text-decoration-none">Terms</a>
+        </div>
+    </div>
 </footer>
+
+<!-- Bootstrap Tooltip Initialization -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
+</script>
